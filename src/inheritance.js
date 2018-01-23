@@ -1,4 +1,4 @@
-class Task {
+let Task = class {
   constructor(title) {
     this.title = title;
     this.done = false;
@@ -26,7 +26,7 @@ class Task {
 
 Task.count = 0;
 
-class SubTask extends Task {
+let SubTask = class extends Task {
   constructor(title, parent) {
     super(title);
     this.parent = parent;
@@ -49,3 +49,5 @@ task.complete();
 subTask.complete();
 
 console.log(task, subTask);
+
+//классы не используются до объявления
